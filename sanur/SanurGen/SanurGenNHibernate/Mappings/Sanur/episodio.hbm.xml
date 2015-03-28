@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="SanurGenNHibernate"
+		                   namespace="SanurGenNHibernate.EN.Sanur">
+			<class name="EpisodioEN" table="[Episodio]">
+				  	
+						<id name="IdEpisodio" column="[idEpisodio]" type="integer">
+							<generator class="identity"/>
+						</id>
+					<property name="FechaInicio" type="timestamp"> 
+						<column name="[fechaInicio]"  not-null="true"/>
+					</property>
+					<property name="Observaciones" type="string"> 
+						<column name="[observaciones]"  not-null="true"/>
+					</property>
+					<property name="FechaFin" type="timestamp"> 
+						<column name="[fechaFin]"  not-null="true"/>
+					</property>
+					<property name="Estado" > 
+						<column name="[estado]"  not-null="true"/>
+					</property>
+					<property name="Emergencia" type="boolean"> 
+						<column name="[emergencia]"  not-null="true"/>
+					</property>
+					<property name="Imporante" type="boolean"> 
+						<column name="[imporante]"  not-null="true"/>
+					</property>
+			
+		  			
+						<many-to-one name="Paciente" class="SanurGenNHibernate.EN.Sanur.PacienteEN" >	
+								<column name="[FK_idPaciente_idPaciente]"/>
+						</many-to-one>
+											 					
+			
+		  			
+					
+							   <one-to-one name="Triaje" class="SanurGenNHibernate.EN.Sanur.TriajeEN" property-ref="Episodio" cascade="delete"/>							
+					 
+						
+			
+			
+			
+			
+		  			
+					
+							<many-to-one name="Diagnostico" class="SanurGenNHibernate.EN.Sanur.DiagnosticoEN" cascade="delete">
+								<column name="[FK_idDiagnostico_idDiagnostico]"/>
+        					</many-to-one>
+					 
+						
+			
+		  			
+						<bag name="Prueba" cascade="delete">
+							<key>
+								<column name="[FK_idEpisodio_idEpisodio]"/>
+					      	</key>
+							<one-to-many class="SanurGenNHibernate.EN.Sanur.PruebaEN"/>
+					    </bag>
+					
+			
+		  			
+						<many-to-one name="Administrativo" class="SanurGenNHibernate.EN.Sanur.AdministrativoEN" >	
+								<column name="[FK_idUsuario_idAdministrativo]"/>
+						</many-to-one>
+											 					
+			
+			
+			
+			
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="EpisodioENReadAllHQL">from EpisodioEN</query>
+		</hibernate-mapping>
+	

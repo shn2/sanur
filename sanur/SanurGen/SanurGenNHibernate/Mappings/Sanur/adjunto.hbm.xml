@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="SanurGenNHibernate"
+		                   namespace="SanurGenNHibernate.EN.Sanur">
+			<class name="AdjuntoEN" table="[Adjunto]">
+				  	
+						<id name="IdAdjunto" column="[idAdjunto]" type="integer">
+							<generator class="identity"/>
+						</id>
+					<property name="Url" type="string"> 
+						<column name="[url]"  unique="true" not-null="true"/>
+					</property>
+					<property name="Tipo" type="string"> 
+						<column name="[tipo]"  not-null="true"/>
+					</property>
+			
+		  			
+						<many-to-one name="Prueba" class="SanurGenNHibernate.EN.Sanur.PruebaEN" >	
+								<column name="[FK_idPrueba_idPrueba]"/>
+						</many-to-one>
+											 					
+			
+			
+			
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="AdjuntoENReadAllHQL">from AdjuntoEN</query>
+		</hibernate-mapping>
+	

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="SanurGenNHibernate"
+		                   namespace="SanurGenNHibernate.EN.Sanur">
+			<class name="PruebaEN" table="[Prueba]">
+						<id name="IdPrueba" column="[idPrueba]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Descripcion" type="string"> 
+						<column name="[descripcion]"  not-null="true"/>
+					</property>
+					<property name="Resultado" type="string"> 
+						<column name="[resultado]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+		  			
+						<many-to-one name="Episodio" class="SanurGenNHibernate.EN.Sanur.EpisodioEN" >	
+								<column name="[FK_idEpisodio_idEpisodio]"/>
+						</many-to-one>
+											 					
+			
+			
+		  			
+						<bag name="Adjunto" cascade="delete">
+							<key>
+								<column name="[FK_idPrueba_idPrueba]"/>
+					      	</key>
+							<one-to-many class="SanurGenNHibernate.EN.Sanur.AdjuntoEN"/>
+					    </bag>
+					
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="PruebaENReadAllHQL">from PruebaEN</query>
+		</hibernate-mapping>
+	
