@@ -119,5 +119,17 @@ public System.Collections.Generic.IList<PacienteEN> ReadAll (int first, int size
         list = _IPacienteCAD.ReadAll (first, size);
         return list;
 }
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarDNI (string dni)
+{
+        return _IPacienteCAD.BuscarDNI (dni);
+}
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarSIP (int sip)
+{
+        return _IPacienteCAD.BuscarSIP (sip);
+}
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarNombrePaciente (string nombre, string apellido)
+{
+        return _IPacienteCAD.BuscarNombrePaciente (nombre, apellido);
+}
 }
 }

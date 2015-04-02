@@ -1,24 +1,22 @@
 0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
-16   [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201206110920
-16   [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
-16   [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
-16   [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/workspace/Sanur/templates/workflow/generator.mwe
-16   [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
-1017 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\workspace'
-1115 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
-1271 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
-1599 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/workspace/Sanur/templates/workflow/generator.mwe:10
-1599 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
-2099 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
-3169 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [CONFIGURATION:../SanurGen(overwrite=false,append=false,fileEncoding=utf-8), ../SanurGen]
-configuroConf:C:\Users\SETHWA~1\AppData\Local\Temp\OOH4RIA605470237260526531.cfg
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201206110920
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/workspace/Sanur/templates/workflow/generator.mwe
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+665  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\workspace'
+747  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+849  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1020 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/workspace/Sanur/templates/workflow/generator.mwe:10
+1020 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+1280 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+1817 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [CONFIGURATION:../SanurGen(overwrite=false,append=false,fileEncoding=utf-8), ../SanurGen]
+configuroConf:C:\Users\SETHWA~1\AppData\Local\Temp\OOH4RIA1092449220523095970.cfg
 enc:utf-8
-4138 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
-4154 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.016s
-4154 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 4
-4154 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 0
-enc:utf-8
-enc:utf-8
+2077 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+2159 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.081s
+2159 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 70
+2159 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 3
 enc:utf-8
 enc:utf-8
 enc:utf-8
@@ -69,11 +67,12 @@ enc:utf-8
 enc:utf-8
 enc:utf-8
 enc:utf-8
-8884 [main] INFO         org.eclipse.xpand2.Generator  - Written 72 files to outlet [default](../SanurGen)
-8884 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 1 files to outlet [default](../SanurGen)
-8884 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
-8916 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
-8947 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+enc:utf-8
+enc:utf-8
+6143 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 73 files to outlet [default](../SanurGen)
+6144 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+6169 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+6198 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
 ../SanurGen\SanurGenNHibernate\AppLib\Antlr3.Runtime.dll
 ../SanurGen\SanurGenNHibernate\AppLib\Castle.DynamicProxy2.dll
 ../SanurGen\SanurGenNHibernate\AppLib\Iesi.Collections.dll
@@ -84,4 +83,4 @@ enc:utf-8
 ../SanurGen\SanurGenNHibernate\AppLib\NHibernate.dll
 ../SanurGen\SanurGenNHibernate\AppLib\nunit.core.dll
 ../SanurGen\SanurGenNHibernate\AppLib\nunit.framework.dll
-9616 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 8033ms!
+6209 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 5190ms!
