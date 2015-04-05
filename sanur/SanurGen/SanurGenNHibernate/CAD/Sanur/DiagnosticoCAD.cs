@@ -56,15 +56,8 @@ public string New_ (DiagnosticoEN diagnostico)
         try
         {
                 SessionInitializeTransaction ();
-                if (diagnostico.Episodio != null) {
-                        diagnostico.Episodio = (SanurGenNHibernate.EN.Sanur.EpisodioEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.EpisodioEN), diagnostico.Episodio.IdEpisodio);
-
-                        diagnostico.Episodio.Diagnostico = diagnostico;
-                }
                 if (diagnostico.Medico != null) {
                         diagnostico.Medico = (SanurGenNHibernate.EN.Sanur.MedicoEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.MedicoEN), diagnostico.Medico.IdUsuario);
-
-                        diagnostico.Medico.Diagnostico.Add (diagnostico);
                 }
 
                 session.Save (diagnostico);

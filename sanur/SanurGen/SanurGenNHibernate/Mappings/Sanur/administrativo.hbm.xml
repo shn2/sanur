@@ -8,16 +8,6 @@
     		<column name="[idUsuario]"/>
    	</key>
 
-			
-		  			
-						<bag name="Episodio" >
-							<key>
-								<column name="[FK_idUsuario_idAdministrativo]"/>
-					      	</key>
-							<one-to-many class="SanurGenNHibernate.EN.Sanur.EpisodioEN"/>
-					    </bag>
-					
-					
 		
 		  </joined-subclass>	
 		  

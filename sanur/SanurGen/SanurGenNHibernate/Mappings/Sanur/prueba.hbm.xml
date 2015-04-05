@@ -17,27 +17,22 @@
 			
 			
 			
-		  			
-						<many-to-one name="Episodio" class="SanurGenNHibernate.EN.Sanur.EpisodioEN" >	
-								<column name="[FK_idEpisodio_idEpisodio]"/>
-						</many-to-one>
-											 					
 			
-			
-		  			
-						<bag name="Adjunto" cascade="delete">
+					
+					
+					
+					
+					
+					
+						<bag name="Adjunto" table="[adjunto_prueba]" cascade="delete">
 							<key>
-								<column name="[FK_idPrueba_idPrueba]"/>
-					      	</key>
-							<one-to-many class="SanurGenNHibernate.EN.Sanur.AdjuntoEN"/>
-					    </bag>
-					
-					
-					
-					
-					
-					
-					
+									<column name="[FK_idPrueba_idPrueba]"/>
+							</key>
+      						<many-to-many class="SanurGenNHibernate.EN.Sanur.AdjuntoEN">
+									<column name="[FK_idAdjunto_idAdjunto]" unique="true"/>
+      						</many-to-many>
+    					</bag>
+    				
 		
 		  </class>
 		  

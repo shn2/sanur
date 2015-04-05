@@ -9,12 +9,6 @@ public partial class AdjuntoEN
  *
  */
 
-private SanurGenNHibernate.EN.Sanur.PruebaEN prueba;
-
-/**
- *
- */
-
 private int idAdjunto;
 
 /**
@@ -31,11 +25,6 @@ private string tipo;
 
 
 
-
-
-public virtual SanurGenNHibernate.EN.Sanur.PruebaEN Prueba {
-        get { return prueba; } set { prueba = value;  }
-}
 
 
 public virtual int IdAdjunto {
@@ -62,23 +51,21 @@ public AdjuntoEN()
 
 
 
-public AdjuntoEN(int idAdjunto, SanurGenNHibernate.EN.Sanur.PruebaEN prueba, string url, string tipo)
+public AdjuntoEN(int idAdjunto, string url, string tipo)
 {
-        this.init (idAdjunto, prueba, url, tipo);
+        this.init (idAdjunto, url, tipo);
 }
 
 
 public AdjuntoEN(AdjuntoEN adjunto)
 {
-        this.init (adjunto.IdAdjunto, adjunto.Prueba, adjunto.Url, adjunto.Tipo);
+        this.init (adjunto.IdAdjunto, adjunto.Url, adjunto.Tipo);
 }
 
-private void init (int idAdjunto, SanurGenNHibernate.EN.Sanur.PruebaEN prueba, string url, string tipo)
+private void init (int idAdjunto, string url, string tipo)
 {
         this.IdAdjunto = idAdjunto;
 
-
-        this.Prueba = prueba;
 
         this.Url = url;
 

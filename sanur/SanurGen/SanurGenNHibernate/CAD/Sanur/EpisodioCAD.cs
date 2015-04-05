@@ -58,13 +58,9 @@ public int New_ (EpisodioEN episodio)
                 SessionInitializeTransaction ();
                 if (episodio.Paciente != null) {
                         episodio.Paciente = (SanurGenNHibernate.EN.Sanur.PacienteEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.PacienteEN), episodio.Paciente.IdPaciente);
-
-                        episodio.Paciente.Episodio.Add (episodio);
                 }
                 if (episodio.Administrativo != null) {
                         episodio.Administrativo = (SanurGenNHibernate.EN.Sanur.AdministrativoEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.AdministrativoEN), episodio.Administrativo.IdUsuario);
-
-                        episodio.Administrativo.Episodio.Add (episodio);
                 }
 
                 session.Save (episodio);
@@ -166,6 +162,37 @@ public System.Collections.Generic.IList<EpisodioEN> ReadAll (int first, int size
                                  SetFirstResult (first).SetMaxResults (size).List<EpisodioEN>();
                 else
                         result = session.CreateCriteria (typeof(EpisodioEN)).List<EpisodioEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in EpisodioCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
+
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> ObtenerHistorial (int idPaciente)
+{
+        System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM EpisodioEN self where select ep FROM EpisodioEN as ep inner join ep.Paciente as pa where pa.IdPaciente = :idPaciente";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENobtenerHistorialHQL");
+                query.SetParameter ("idPaciente", idPaciente);
+
+                result = query.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
                 SessionCommit ();
         }
 

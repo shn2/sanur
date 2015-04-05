@@ -56,11 +56,6 @@ public string New_ (PruebaEN prueba)
         try
         {
                 SessionInitializeTransaction ();
-                if (prueba.Episodio != null) {
-                        prueba.Episodio = (SanurGenNHibernate.EN.Sanur.EpisodioEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.EpisodioEN), prueba.Episodio.IdEpisodio);
-
-                        prueba.Episodio.Prueba.Add (prueba);
-                }
 
                 session.Save (prueba);
                 SessionCommit ();

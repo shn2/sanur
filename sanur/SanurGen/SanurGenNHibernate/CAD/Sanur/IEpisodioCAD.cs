@@ -17,5 +17,8 @@ EpisodioEN ReadOID (int idEpisodio);
 
 
 System.Collections.Generic.IList<EpisodioEN> ReadAll (int first, int size);
+
+
+System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> ObtenerHistorial (int idPaciente);
 }
 }

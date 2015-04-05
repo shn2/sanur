@@ -32,19 +32,13 @@ public IDiagnosticoCAD get_IDiagnosticoCAD ()
         return this._IDiagnosticoCAD;
 }
 
-public string New_ (int p_episodio, int p_medico, string p_juicio, string p_tratamiento, string p_idDiagnostico, bool p_hospitalizacion)
+public string New_ (int p_medico, string p_juicio, string p_tratamiento, string p_idDiagnostico, bool p_hospitalizacion)
 {
         DiagnosticoEN diagnosticoEN = null;
         string oid;
 
         //Initialized DiagnosticoEN
         diagnosticoEN = new DiagnosticoEN ();
-
-        if (p_episodio != -1) {
-                diagnosticoEN.Episodio = new SanurGenNHibernate.EN.Sanur.EpisodioEN ();
-                diagnosticoEN.Episodio.IdEpisodio = p_episodio;
-        }
-
 
         if (p_medico != -1) {
                 diagnosticoEN.Medico = new SanurGenNHibernate.EN.Sanur.MedicoEN ();

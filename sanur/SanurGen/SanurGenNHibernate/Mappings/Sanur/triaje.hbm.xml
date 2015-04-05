@@ -23,27 +23,17 @@
 						<column name="[observaciones]"  not-null="true"/>
 					</property>
 			
-		  			
-						<many-to-one name="Medico" class="SanurGenNHibernate.EN.Sanur.MedicoEN" >	
-								<column name="[FK_idUsuario_idMedico]"/>
+			
+			
+			
+			
+			
+			
+					
+					
+						<many-to-one name="Medico" class="SanurGenNHibernate.EN.Sanur.MedicoEN" >
+									<column name="[FK_idUsuario_idMedico]"/>
 						</many-to-one>
-											 					
-			
-		  			
-					
-							<many-to-one name="Episodio" class="SanurGenNHibernate.EN.Sanur.EpisodioEN" >
-								<column name="[FK_idEpisodio_idEpisodio]"/>
-        					</many-to-one>
-					 
-						
-			
-			
-			
-			
-			
-			
-					
-					
 					
 					
 					

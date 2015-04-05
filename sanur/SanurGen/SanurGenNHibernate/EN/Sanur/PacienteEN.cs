@@ -57,12 +57,6 @@ private int idPaciente;
  *
  */
 
-private System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> episodio;
-
-/**
- *
- */
-
 private int dni;
 
 /**
@@ -145,11 +139,6 @@ public virtual int IdPaciente {
 }
 
 
-public virtual System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> Episodio {
-        get { return episodio; } set { episodio = value;  }
-}
-
-
 public virtual int Dni {
         get { return dni; } set { dni = value;  }
 }
@@ -190,23 +179,22 @@ public virtual string IPS {
 
 public PacienteEN()
 {
-        episodio = new System.Collections.Generic.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
 }
 
 
 
-public PacienteEN(int idPaciente, string nombre, string apellido, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> episodio, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string iPS)
+public PacienteEN(int idPaciente, string nombre, string apellido, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string iPS)
 {
-        this.init (idPaciente, nombre, apellido, fNac, tlf, direccion, nacionalidad, sip, episodio, dni, sexo, email, municipio, grupoSang, codigoPostal, iPS);
+        this.init (idPaciente, nombre, apellido, fNac, tlf, direccion, nacionalidad, sip, dni, sexo, email, municipio, grupoSang, codigoPostal, iPS);
 }
 
 
 public PacienteEN(PacienteEN paciente)
 {
-        this.init (paciente.IdPaciente, paciente.Nombre, paciente.Apellido, paciente.FNac, paciente.Tlf, paciente.Direccion, paciente.Nacionalidad, paciente.Sip, paciente.Episodio, paciente.Dni, paciente.Sexo, paciente.Email, paciente.Municipio, paciente.GrupoSang, paciente.CodigoPostal, paciente.IPS);
+        this.init (paciente.IdPaciente, paciente.Nombre, paciente.Apellido, paciente.FNac, paciente.Tlf, paciente.Direccion, paciente.Nacionalidad, paciente.Sip, paciente.Dni, paciente.Sexo, paciente.Email, paciente.Municipio, paciente.GrupoSang, paciente.CodigoPostal, paciente.IPS);
 }
 
-private void init (int idPaciente, string nombre, string apellido, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> episodio, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string iPS)
+private void init (int idPaciente, string nombre, string apellido, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string iPS)
 {
         this.IdPaciente = idPaciente;
 
@@ -224,8 +212,6 @@ private void init (int idPaciente, string nombre, string apellido, Nullable<Date
         this.Nacionalidad = nacionalidad;
 
         this.Sip = sip;
-
-        this.Episodio = episodio;
 
         this.Dni = dni;
 

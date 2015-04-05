@@ -58,13 +58,6 @@ public int New_ (TriajeEN triaje)
                 SessionInitializeTransaction ();
                 if (triaje.Medico != null) {
                         triaje.Medico = (SanurGenNHibernate.EN.Sanur.MedicoEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.MedicoEN), triaje.Medico.IdUsuario);
-
-                        triaje.Medico.Triaje.Add (triaje);
-                }
-                if (triaje.Episodio != null) {
-                        triaje.Episodio = (SanurGenNHibernate.EN.Sanur.EpisodioEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.EpisodioEN), triaje.Episodio.IdEpisodio);
-
-                        triaje.Episodio.Triaje = triaje;
                 }
 
                 session.Save (triaje);

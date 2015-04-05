@@ -27,12 +27,6 @@ private string descripcion;
  *
  */
 
-private SanurGenNHibernate.EN.Sanur.EpisodioEN episodio;
-
-/**
- *
- */
-
 private string resultado;
 
 /**
@@ -60,11 +54,6 @@ public virtual string Descripcion {
 }
 
 
-public virtual SanurGenNHibernate.EN.Sanur.EpisodioEN Episodio {
-        get { return episodio; } set { episodio = value;  }
-}
-
-
 public virtual string Resultado {
         get { return resultado; } set { resultado = value;  }
 }
@@ -85,18 +74,18 @@ public PruebaEN()
 
 
 
-public PruebaEN(string idPrueba, string nombre, string descripcion, SanurGenNHibernate.EN.Sanur.EpisodioEN episodio, string resultado, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.AdjuntoEN> adjunto)
+public PruebaEN(string idPrueba, string nombre, string descripcion, string resultado, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.AdjuntoEN> adjunto)
 {
-        this.init (idPrueba, nombre, descripcion, episodio, resultado, adjunto);
+        this.init (idPrueba, nombre, descripcion, resultado, adjunto);
 }
 
 
 public PruebaEN(PruebaEN prueba)
 {
-        this.init (prueba.IdPrueba, prueba.Nombre, prueba.Descripcion, prueba.Episodio, prueba.Resultado, prueba.Adjunto);
+        this.init (prueba.IdPrueba, prueba.Nombre, prueba.Descripcion, prueba.Resultado, prueba.Adjunto);
 }
 
-private void init (string idPrueba, string nombre, string descripcion, SanurGenNHibernate.EN.Sanur.EpisodioEN episodio, string resultado, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.AdjuntoEN> adjunto)
+private void init (string idPrueba, string nombre, string descripcion, string resultado, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.AdjuntoEN> adjunto)
 {
         this.IdPrueba = idPrueba;
 
@@ -104,8 +93,6 @@ private void init (string idPrueba, string nombre, string descripcion, SanurGenN
         this.Nombre = nombre;
 
         this.Descripcion = descripcion;
-
-        this.Episodio = episodio;
 
         this.Resultado = resultado;
 

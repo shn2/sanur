@@ -102,5 +102,9 @@ public System.Collections.Generic.IList<EpisodioEN> ReadAll (int first, int size
         list = _IEpisodioCAD.ReadAll (first, size);
         return list;
 }
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> ObtenerHistorial (int idPaciente)
+{
+        return _IEpisodioCAD.ObtenerHistorial (idPaciente);
+}
 }
 }

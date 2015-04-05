@@ -12,26 +12,6 @@
 						<column name="[especialidad]"  not-null="true"/>
 					</property>
 			
-		  			
-						<bag name="Triaje" >
-							<key>
-								<column name="[FK_idUsuario_idMedico]"/>
-					      	</key>
-							<one-to-many class="SanurGenNHibernate.EN.Sanur.TriajeEN"/>
-					    </bag>
-					
-			
-			
-		  			
-						<bag name="Diagnostico" >
-							<key>
-								<column name="[FK_idUsuario_idMedico]"/>
-					      	</key>
-							<one-to-many class="SanurGenNHibernate.EN.Sanur.DiagnosticoEN"/>
-					    </bag>
-					
-					
-					
 					
 		
 		  </joined-subclass>	

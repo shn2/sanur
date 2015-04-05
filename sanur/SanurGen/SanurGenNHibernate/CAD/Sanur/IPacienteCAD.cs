@@ -22,12 +22,6 @@ PacienteEN ReadOID (int idPaciente);
 System.Collections.Generic.IList<PacienteEN> ReadAll (int first, int size);
 
 
-System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarDNI (string dni);
-
-
-System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarSIP (int sip);
-
-
-System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarNombrePaciente (string nombre, string apellido);
+SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDNI (int dni);
 }
 }

@@ -11,36 +11,14 @@ public partial class MedicoEN                   :                           Sanu
  *
  */
 
-private System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.TriajeEN> triaje;
-
-/**
- *
- */
-
 private SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum especialidad;
 
-/**
- *
- */
-
-private System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.DiagnosticoEN> diagnostico;
 
 
-
-
-
-public virtual System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.TriajeEN> Triaje {
-        get { return triaje; } set { triaje = value;  }
-}
 
 
 public virtual SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum Especialidad {
         get { return especialidad; } set { especialidad = value;  }
-}
-
-
-public virtual System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.DiagnosticoEN> Diagnostico {
-        get { return diagnostico; } set { diagnostico = value;  }
 }
 
 
@@ -49,33 +27,27 @@ public virtual System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.Diag
 
 public MedicoEN() : base ()
 {
-        triaje = new System.Collections.Generic.List<SanurGenNHibernate.EN.Sanur.TriajeEN>();
-        diagnostico = new System.Collections.Generic.List<SanurGenNHibernate.EN.Sanur.DiagnosticoEN>();
 }
 
 
 
-public MedicoEN(int idUsuario, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.TriajeEN> triaje, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum especialidad, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.DiagnosticoEN> diagnostico, string nombre, String contrasena, bool iniciado, string email, string apellidos)
+public MedicoEN(int idUsuario, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum especialidad, string nombre, String contrasena, bool iniciado, string email, string apellidos)
 {
-        this.init (idUsuario, triaje, especialidad, diagnostico, nombre, contrasena, iniciado, email, apellidos);
+        this.init (idUsuario, especialidad, nombre, contrasena, iniciado, email, apellidos);
 }
 
 
 public MedicoEN(MedicoEN medico)
 {
-        this.init (medico.IdUsuario, medico.Triaje, medico.Especialidad, medico.Diagnostico, medico.Nombre, medico.Contrasena, medico.Iniciado, medico.Email, medico.Apellidos);
+        this.init (medico.IdUsuario, medico.Especialidad, medico.Nombre, medico.Contrasena, medico.Iniciado, medico.Email, medico.Apellidos);
 }
 
-private void init (int idUsuario, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.TriajeEN> triaje, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum especialidad, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.DiagnosticoEN> diagnostico, string nombre, String contrasena, bool iniciado, string email, string apellidos)
+private void init (int idUsuario, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum especialidad, string nombre, String contrasena, bool iniciado, string email, string apellidos)
 {
         this.IdUsuario = idUsuario;
 
 
-        this.Triaje = triaje;
-
         this.Especialidad = especialidad;
-
-        this.Diagnostico = diagnostico;
 
         this.Nombre = nombre;
 

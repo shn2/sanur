@@ -14,23 +14,15 @@
 						<column name="[hospitalizacion]"  not-null="true"/>
 					</property>
 			
-		  			
-					
-							   <one-to-one name="Episodio" class="SanurGenNHibernate.EN.Sanur.EpisodioEN" property-ref="Diagnostico" />							
-					 
-						
 			
-		  			
-						<many-to-one name="Medico" class="SanurGenNHibernate.EN.Sanur.MedicoEN" >	
-								<column name="[FK_idUsuario_idMedico]"/>
+			
+			
+			
+					
+					
+						<many-to-one name="Medico" class="SanurGenNHibernate.EN.Sanur.MedicoEN" >
+									<column name="[FK_idUsuario_idMedico]"/>
 						</many-to-one>
-											 					
-			
-			
-			
-			
-					
-					
 					
 					
 					

@@ -14,15 +14,8 @@
 						<column name="[tipo]"  not-null="true"/>
 					</property>
 			
-		  			
-						<many-to-one name="Prueba" class="SanurGenNHibernate.EN.Sanur.PruebaEN" >	
-								<column name="[FK_idPrueba_idPrueba]"/>
-						</many-to-one>
-											 					
 			
 			
-			
-					
 					
 					
 					

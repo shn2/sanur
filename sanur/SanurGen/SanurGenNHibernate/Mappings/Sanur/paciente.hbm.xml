@@ -58,22 +58,12 @@
 			
 			
 			
-		  			
-						<bag name="Episodio" >
-							<key>
-								<column name="[FK_idPaciente_idPaciente]"/>
-					      	</key>
-							<one-to-many class="SanurGenNHibernate.EN.Sanur.EpisodioEN"/>
-					    </bag>
-					
 			
 			
 			
 			
 			
 			
-			
-					
 					
 					
 					
@@ -93,8 +83,6 @@
 		  </class>
 		  
 		  <query name="PacienteENReadAllHQL">from PacienteEN</query>
-		  <query name="PacienteENbuscarDNIHQL"><![CDATA[FROM pacienteEN AS pa WHERE pa.dni = :dni]]></query>
-		  <query name="PacienteENbuscarSIPHQL"><![CDATA[FROM pacienteEN AS pa WHERE pa.sip = :sip]]></query>
-		  <query name="PacienteENbuscarNombrePacienteHQL"><![CDATA[FROM PacienteEN AS pa WHERE pa.nombre = :nombre AND pa.apellido = :apellido]]></query>
+		  <query name="PacienteENbuscarDNIHQL"><![CDATA[from PacienteEN where dni= :dni]]></query>
 		</hibernate-mapping>
 	

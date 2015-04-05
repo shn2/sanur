@@ -32,7 +32,7 @@ public ITriajeCAD get_ITriajeCAD ()
         return this._ITriajeCAD;
 }
 
-public int New_ (int p_medico, int p_episodio, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum p_prioridad, string p_movilidad, string p_motivoAsist, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum p_destino, string p_observaciones)
+public int New_ (int p_medico, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum p_prioridad, string p_movilidad, string p_motivoAsist, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum p_destino, string p_observaciones)
 {
         TriajeEN triajeEN = null;
         int oid;
@@ -43,12 +43,6 @@ public int New_ (int p_medico, int p_episodio, SanurGenNHibernate.Enumerated.San
         if (p_medico != -1) {
                 triajeEN.Medico = new SanurGenNHibernate.EN.Sanur.MedicoEN ();
                 triajeEN.Medico.IdUsuario = p_medico;
-        }
-
-
-        if (p_episodio != -1) {
-                triajeEN.Episodio = new SanurGenNHibernate.EN.Sanur.EpisodioEN ();
-                triajeEN.Episodio.IdEpisodio = p_episodio;
         }
 
         triajeEN.Prioridad = p_prioridad;

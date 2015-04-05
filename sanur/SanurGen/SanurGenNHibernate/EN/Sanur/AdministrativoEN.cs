@@ -7,48 +7,27 @@ public partial class AdministrativoEN                   :                       
 
 
 {
-/**
- *
- */
-
-private System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> episodio;
-
-
-
-
-
-public virtual System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> Episodio {
-        get { return episodio; } set { episodio = value;  }
-}
-
-
-
-
-
 public AdministrativoEN() : base ()
 {
-        episodio = new System.Collections.Generic.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
 }
 
 
 
-public AdministrativoEN(int idUsuario, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> episodio, string nombre, String contrasena, bool iniciado, string email, string apellidos)
+public AdministrativoEN(int idUsuario, string nombre, String contrasena, bool iniciado, string email, string apellidos)
 {
-        this.init (idUsuario, episodio, nombre, contrasena, iniciado, email, apellidos);
+        this.init (idUsuario, nombre, contrasena, iniciado, email, apellidos);
 }
 
 
 public AdministrativoEN(AdministrativoEN administrativo)
 {
-        this.init (administrativo.IdUsuario, administrativo.Episodio, administrativo.Nombre, administrativo.Contrasena, administrativo.Iniciado, administrativo.Email, administrativo.Apellidos);
+        this.init (administrativo.IdUsuario, administrativo.Nombre, administrativo.Contrasena, administrativo.Iniciado, administrativo.Email, administrativo.Apellidos);
 }
 
-private void init (int idUsuario, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> episodio, string nombre, String contrasena, bool iniciado, string email, string apellidos)
+private void init (int idUsuario, string nombre, String contrasena, bool iniciado, string email, string apellidos)
 {
         this.IdUsuario = idUsuario;
 
-
-        this.Episodio = episodio;
 
         this.Nombre = nombre;
 

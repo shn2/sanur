@@ -9,12 +9,6 @@ public partial class DiagnosticoEN
  *
  */
 
-private SanurGenNHibernate.EN.Sanur.EpisodioEN episodio;
-
-/**
- *
- */
-
 private SanurGenNHibernate.EN.Sanur.MedicoEN medico;
 
 /**
@@ -43,11 +37,6 @@ private bool hospitalizacion;
 
 
 
-
-
-public virtual SanurGenNHibernate.EN.Sanur.EpisodioEN Episodio {
-        get { return episodio; } set { episodio = value;  }
-}
 
 
 public virtual SanurGenNHibernate.EN.Sanur.MedicoEN Medico {
@@ -84,23 +73,21 @@ public DiagnosticoEN()
 
 
 
-public DiagnosticoEN(string idDiagnostico, SanurGenNHibernate.EN.Sanur.EpisodioEN episodio, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
+public DiagnosticoEN(string idDiagnostico, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
 {
-        this.init (idDiagnostico, episodio, medico, juicio, tratamiento, hospitalizacion);
+        this.init (idDiagnostico, medico, juicio, tratamiento, hospitalizacion);
 }
 
 
 public DiagnosticoEN(DiagnosticoEN diagnostico)
 {
-        this.init (diagnostico.IdDiagnostico, diagnostico.Episodio, diagnostico.Medico, diagnostico.Juicio, diagnostico.Tratamiento, diagnostico.Hospitalizacion);
+        this.init (diagnostico.IdDiagnostico, diagnostico.Medico, diagnostico.Juicio, diagnostico.Tratamiento, diagnostico.Hospitalizacion);
 }
 
-private void init (string idDiagnostico, SanurGenNHibernate.EN.Sanur.EpisodioEN episodio, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
+private void init (string idDiagnostico, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
 {
         this.IdDiagnostico = idDiagnostico;
 
-
-        this.Episodio = episodio;
 
         this.Medico = medico;
 

@@ -15,12 +15,6 @@ private SanurGenNHibernate.EN.Sanur.MedicoEN medico;
  *
  */
 
-private SanurGenNHibernate.EN.Sanur.EpisodioEN episodio;
-
-/**
- *
- */
-
 private SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum prioridad;
 
 /**
@@ -59,11 +53,6 @@ private string observaciones;
 
 public virtual SanurGenNHibernate.EN.Sanur.MedicoEN Medico {
         get { return medico; } set { medico = value;  }
-}
-
-
-public virtual SanurGenNHibernate.EN.Sanur.EpisodioEN Episodio {
-        get { return episodio; } set { episodio = value;  }
 }
 
 
@@ -106,25 +95,23 @@ public TriajeEN()
 
 
 
-public TriajeEN(int idTriaje, SanurGenNHibernate.EN.Sanur.MedicoEN medico, SanurGenNHibernate.EN.Sanur.EpisodioEN episodio, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum prioridad, string movilidad, string motivoAsist, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino, string observaciones)
+public TriajeEN(int idTriaje, SanurGenNHibernate.EN.Sanur.MedicoEN medico, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum prioridad, string movilidad, string motivoAsist, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino, string observaciones)
 {
-        this.init (idTriaje, medico, episodio, prioridad, movilidad, motivoAsist, destino, observaciones);
+        this.init (idTriaje, medico, prioridad, movilidad, motivoAsist, destino, observaciones);
 }
 
 
 public TriajeEN(TriajeEN triaje)
 {
-        this.init (triaje.IdTriaje, triaje.Medico, triaje.Episodio, triaje.Prioridad, triaje.Movilidad, triaje.MotivoAsist, triaje.Destino, triaje.Observaciones);
+        this.init (triaje.IdTriaje, triaje.Medico, triaje.Prioridad, triaje.Movilidad, triaje.MotivoAsist, triaje.Destino, triaje.Observaciones);
 }
 
-private void init (int idTriaje, SanurGenNHibernate.EN.Sanur.MedicoEN medico, SanurGenNHibernate.EN.Sanur.EpisodioEN episodio, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum prioridad, string movilidad, string motivoAsist, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino, string observaciones)
+private void init (int idTriaje, SanurGenNHibernate.EN.Sanur.MedicoEN medico, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum prioridad, string movilidad, string motivoAsist, SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino, string observaciones)
 {
         this.IdTriaje = idTriaje;
 
 
         this.Medico = medico;
-
-        this.Episodio = episodio;
 
         this.Prioridad = prioridad;
 

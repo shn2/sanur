@@ -32,7 +32,7 @@ public IPruebaCAD get_IPruebaCAD ()
         return this._IPruebaCAD;
 }
 
-public string New_ (string p_idPrueba, string p_nombre, string p_descripcion, int p_episodio, string p_resultado)
+public string New_ (string p_idPrueba, string p_nombre, string p_descripcion, string p_resultado)
 {
         PruebaEN pruebaEN = null;
         string oid;
@@ -44,12 +44,6 @@ public string New_ (string p_idPrueba, string p_nombre, string p_descripcion, in
         pruebaEN.Nombre = p_nombre;
 
         pruebaEN.Descripcion = p_descripcion;
-
-
-        if (p_episodio != -1) {
-                pruebaEN.Episodio = new SanurGenNHibernate.EN.Sanur.EpisodioEN ();
-                pruebaEN.Episodio.IdEpisodio = p_episodio;
-        }
 
         pruebaEN.Resultado = p_resultado;
 

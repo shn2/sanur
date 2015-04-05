@@ -223,79 +223,19 @@ public System.Collections.Generic.IList<PacienteEN> ReadAll (int first, int size
         return result;
 }
 
-public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarDNI (string dni)
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDNI (int dni)
 {
-        System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> result;
+        SanurGenNHibernate.EN.Sanur.PacienteEN result;
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM PacienteEN self where FROM pacienteEN AS pa WHERE pa.dni = :dni";
+                //String sql = @"FROM PacienteEN self where from PacienteEN where dni= :dni";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarDNIHQL");
                 query.SetParameter ("dni", dni);
 
-                result = query.List<SanurGenNHibernate.EN.Sanur.PacienteEN>();
-                SessionCommit ();
-        }
 
-        catch (Exception ex) {
-                SessionRollBack ();
-                if (ex is SanurGenNHibernate.Exceptions.ModelException)
-                        throw ex;
-                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in PacienteCAD.", ex);
-        }
-
-
-        finally
-        {
-                SessionClose ();
-        }
-
-        return result;
-}
-public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarSIP (int sip)
-{
-        System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> result;
-        try
-        {
-                SessionInitializeTransaction ();
-                //String sql = @"FROM PacienteEN self where FROM pacienteEN AS pa WHERE pa.sip = :sip";
-                //IQuery query = session.CreateQuery(sql);
-                IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarSIPHQL");
-                query.SetParameter ("sip", sip);
-
-                result = query.List<SanurGenNHibernate.EN.Sanur.PacienteEN>();
-                SessionCommit ();
-        }
-
-        catch (Exception ex) {
-                SessionRollBack ();
-                if (ex is SanurGenNHibernate.Exceptions.ModelException)
-                        throw ex;
-                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in PacienteCAD.", ex);
-        }
-
-
-        finally
-        {
-                SessionClose ();
-        }
-
-        return result;
-}
-public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> BuscarNombrePaciente (string nombre, string apellido)
-{
-        System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PacienteEN> result;
-        try
-        {
-                SessionInitializeTransaction ();
-                //String sql = @"FROM PacienteEN self where FROM PacienteEN AS pa WHERE pa.nombre = :nombre AND pa.apellido = :apellido";
-                //IQuery query = session.CreateQuery(sql);
-                IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarNombrePacienteHQL");
-                query.SetParameter ("nombre", nombre);
-                query.SetParameter ("apellido", apellido);
-
-                result = query.List<SanurGenNHibernate.EN.Sanur.PacienteEN>();
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.PacienteEN>();
                 SessionCommit ();
         }
 
