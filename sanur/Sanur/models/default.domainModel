@@ -142,7 +142,7 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Y5K8kNb1EeS1n9gJja6MlA" name="p_Paciente_OID" type="OID" typeObject="_y0t0EMwqEeS6vssjVXsTVA"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_-PqeUMwzEeS6vssjVXsTVA" name="readAll" operationType="ReadAll" type="Object" collectionType="List" typeObject="_y0t0EMwqEeS6vssjVXsTVA"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_wMWJINbqEeS1n9gJja6MlA" name="buscarDNI" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_y0t0EMwqEeS6vssjVXsTVA" filter="FROM pacienteEN AS pa WHERE pa.dni = :dni" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_wMWJINbqEeS1n9gJja6MlA" name="buscarDNI" operationType="ReadFilter" type="Object" typeObject="_y0t0EMwqEeS6vssjVXsTVA" filter="FROM pacienteEN AS pa WHERE pa.dni = :dni" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_3ry9QNbqEeS1n9gJja6MlA" name="dni"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4nWKENbrEeS1n9gJja6MlA" name="buscarSIP" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_y0t0EMwqEeS6vssjVXsTVA" filter="FROM pacienteEN AS pa WHERE pa.sip = :sip" automaticSynchronize="false">
@@ -276,7 +276,7 @@
       <enumerationLiterals xmi:type="es.ua.dlsi.ooh:EnumerationLiteral" xmi:id="_VzxGAMwtEeS6vssjVXsTVA" name="preferente" value="2"/>
       <enumerationLiterals xmi:type="es.ua.dlsi.ooh:EnumerationLiteral" xmi:id="_WBRWgMwtEeS6vssjVXsTVA" name="urgente" value="3"/>
       <enumerationLiterals xmi:type="es.ua.dlsi.ooh:EnumerationLiteral" xmi:id="_WOGRkMwtEeS6vssjVXsTVA" name="normal" value="4"/>
-      <enumerationLiterals xmi:type="es.ua.dlsi.ooh:EnumerationLiteral" xmi:id="_WbwTEMwtEeS6vssjVXsTVA" name="no urgente" value="5"/>
+      <enumerationLiterals xmi:type="es.ua.dlsi.ooh:EnumerationLiteral" xmi:id="_WbwTEMwtEeS6vssjVXsTVA" name="no_urgente" value="5"/>
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_TfdroMwuEeS6vssjVXsTVA" name="diagnostico_episodio" alias="diagnostico_episodio" rolOrigin="_TfdrocwuEeS6vssjVXsTVA" rolTarget="_TfdroswuEeS6vssjVXsTVA" classTarget="_c1E3gMwrEeS6vssjVXsTVA" classOrigin="_ZQvOEMwrEeS6vssjVXsTVA" rolOriginName="diagnostico" rolTargetName="episodio" rolOriginMultiplicity="0..1" rolTargetMultiplicity="1..1"/>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_bkMXEMwuEeS6vssjVXsTVA" name="diagnostico_medico" alias="diagnostico_medico" rolOrigin="_bkM-IMwuEeS6vssjVXsTVA" rolTarget="_bkM-IcwuEeS6vssjVXsTVA" classTarget="_c1E3gMwrEeS6vssjVXsTVA" classOrigin="_66iWkMwoEeS6vssjVXsTVA" rolOriginName="diagnostico" rolTargetName="medico" rolOriginMultiplicity="0..*" rolTargetMultiplicity="1..1"/>
@@ -314,26 +314,25 @@
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_J9qScNR3EeS1ZMYpER9JFA" name="Adjunto" alias="Adjunto" asociationTarget="_PXPmQNR3EeS1ZMYpER9JFA">
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zKetMNb1EeS1n9gJja6MlA" name="new" operationType="New" type="Object" typeObject="_J9qScNR3EeS1ZMYpER9JFA">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BALRsNb2EeS1n9gJja6MlA" name="p_url"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BAL4wNb2EeS1n9gJja6MlA" name="p_tipo"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j0W0Nt0EeSwFuGs2iPbRg" name="p_url"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j094Nt0EeSwFuGs2iPbRg" name="p_tipo"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zKf7UNb1EeS1n9gJja6MlA" name="modify" operationType="Modifier" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BAMf0Nb2EeS1n9gJja6MlA" name="p_Adjunto_OID" type="OID" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BAMf0db2EeS1n9gJja6MlA" name="p_url"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BAMf0tb2EeS1n9gJja6MlA" name="p_tipo"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j094dt0EeSwFuGs2iPbRg" name="p_Adjunto_OID" type="OID" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j094tt0EeSwFuGs2iPbRg" name="p_url"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j0949t0EeSwFuGs2iPbRg" name="p_tipo"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zKhJcNb1EeS1n9gJja6MlA" name="destroy" operationType="Destroy" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BANG4Nb2EeS1n9gJja6MlA" name="p_Adjunto_OID" type="OID" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j1k8Nt0EeSwFuGs2iPbRg" name="p_Adjunto_OID" type="OID" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_1s4YgNb1EeS1n9gJja6MlA" name="readOID" operationType="ReadOID" type="Object" typeObject="_J9qScNR3EeS1ZMYpER9JFA">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BANt8Nb2EeS1n9gJja6MlA" name="p_Adjunto_OID" type="OID" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_5j1k8dt0EeSwFuGs2iPbRg" name="p_Adjunto_OID" type="OID" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_1s5moNb1EeS1n9gJja6MlA" name="readAll" operationType="ReadAll" type="Object" collectionType="List" typeObject="_J9qScNR3EeS1ZMYpER9JFA"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_PXPmQtR3EeS1ZMYpER9JFA" alias="idPrueba" navigable="false" associationTarget="_PXPmQNR3EeS1ZMYpER9JFA" name="prueba" type="Object"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_jHWTsNR3EeS1ZMYpER9JFA" alias="idAdjunto" name="idAdjunto" type="Autogenerated" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_lBivgNR3EeS1ZMYpER9JFA" alias="url" name="url" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_mLJb4NR3EeS1ZMYpER9JFA" alias="tipo" name="tipo"/>
-      <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_zKdfENb1EeS1n9gJja6MlA" alias="idAdjunto2" name="id" type="Autogenerated" isOID="true"/>
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_PXPmQNR3EeS1ZMYpER9JFA" name="adjunto_prueba" alias="adjunto_prueba" rolOrigin="_PXPmQdR3EeS1ZMYpER9JFA" rolTarget="_PXPmQtR3EeS1ZMYpER9JFA" classTarget="_J9qScNR3EeS1ZMYpER9JFA" classOrigin="_X1h3gMwvEeS6vssjVXsTVA" rolOriginName="adjunto" rolTargetName="prueba" rolOriginMultiplicity="0..*" rolTargetMultiplicity="1..1"/>
   </es.ua.dlsi.ooh:ConceptualModel>

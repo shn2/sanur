@@ -1,1 +1,3 @@
 C:\workspace\SanurGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Users\Gacel\sanur\sanur\SanurGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Users\Gacel\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
