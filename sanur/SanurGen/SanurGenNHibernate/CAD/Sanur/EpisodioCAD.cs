@@ -211,5 +211,64 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
 
         return result;
 }
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaTriaje ()
+{
+        System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM EpisodioEN self where FROM EpisodioEN as ep where ep.Estado = 1 order by ep.FechaInicio";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENbuscarParaTriajeHQL");
+
+                result = query.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in EpisodioCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaMedico (SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino)
+{
+        System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM EpisodioEN self where FROM EpisodioEN as ep WHERE ep.Estado = 2 AND ep.Triaje.Destino = :destino ORDER BY ep.Triaje.Prioridad ASC, ep.FechaInicio ASC";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENbuscarParaMedicoHQL");
+                query.SetParameter ("destino", destino);
+
+                result = query.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in EpisodioCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }
