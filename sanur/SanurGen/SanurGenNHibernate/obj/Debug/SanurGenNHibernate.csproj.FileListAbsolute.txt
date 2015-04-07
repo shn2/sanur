@@ -13,3 +13,6 @@ C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibern
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
+C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.csproj.GenerateResource.Cache
+C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.HojaTriage.resources
+C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ConfirmarTriage.resources

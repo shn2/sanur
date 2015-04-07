@@ -106,9 +106,9 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
 {
         return _IEpisodioCAD.ObtenerHistorial (idPaciente);
 }
-public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaTriaje ()
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaTriage ()
 {
-        return _IEpisodioCAD.BuscarParaTriaje ();
+        return _IEpisodioCAD.BuscarParaTriage ();
 }
 public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaMedico (SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino)
 {

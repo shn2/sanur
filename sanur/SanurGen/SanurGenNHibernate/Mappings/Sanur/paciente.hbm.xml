@@ -46,8 +46,8 @@
 					<property name="CodigoPostal" type="string"> 
 						<column name="[codigoPostal]"  not-null="true"/>
 					</property>
-					<property name="IPS" type="string"> 
-						<column name="[IPS]"  not-null="true"/>
+					<property name="Ips" type="string"> 
+						<column name="[ips]"  not-null="true"/>
 					</property>
 			
 			

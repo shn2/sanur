@@ -15,4 +15,6 @@ PacienteCEN pacienteCen = new PacienteCEN();
             paciente.GrupoSang = "B-";
             paciente.Ips = "San Juan";
 
-pacienteCEN.New_(
+
+MedicoCEN medicoCEN = new MedicoCEN();
+medicoCEN.New_("Pablo", "pablo", true, "a@a.com", "Carmona", Enumerated.Sanur.EspecialidadEnum.ginecologia);

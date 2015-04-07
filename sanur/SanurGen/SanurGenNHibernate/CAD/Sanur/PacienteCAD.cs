@@ -123,7 +123,7 @@ public void Modify (PacienteEN paciente)
                 pacienteEN.CodigoPostal = paciente.CodigoPostal;
 
 
-                pacienteEN.IPS = paciente.IPS;
+                pacienteEN.Ips = paciente.Ips;
 
                 session.Update (pacienteEN);
                 SessionCommit ();

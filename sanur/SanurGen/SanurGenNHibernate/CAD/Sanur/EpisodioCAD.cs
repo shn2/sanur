@@ -211,7 +211,7 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
 
         return result;
 }
-public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaTriaje ()
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaTriage ()
 {
         System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> result;
         try
@@ -219,7 +219,7 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
                 SessionInitializeTransaction ();
                 //String sql = @"FROM EpisodioEN self where FROM EpisodioEN as ep where ep.Estado = 1 order by ep.FechaInicio";
                 //IQuery query = session.CreateQuery(sql);
-                IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENbuscarParaTriajeHQL");
+                IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENbuscarParaTriageHQL");
 
                 result = query.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
                 SessionCommit ();
@@ -246,7 +246,7 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM EpisodioEN self where FROM EpisodioEN as ep WHERE ep.Estado = 2 AND ep.Triaje.Destino = :destino ORDER BY ep.Triaje.Prioridad ASC, ep.FechaInicio ASC";
+                //String sql = @"FROM EpisodioEN self where FROM EpisodioEN as ep WHERE ep.Estado = 2 AND ep.Triage.Destino = :destino ORDER BY ep.Triage.Prioridad ASC, ep.FechaInicio ASC";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENbuscarParaMedicoHQL");
                 query.SetParameter ("destino", destino);
