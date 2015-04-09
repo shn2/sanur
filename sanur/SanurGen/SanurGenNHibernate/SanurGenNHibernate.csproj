@@ -105,6 +105,12 @@
     <Compile Include="ConfirmarTriage.Designer.cs">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AltaModiUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaModiUsuario.Designer.cs">
+      <DependentUpon>AltaModiUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="HojaTriage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AltaModiUsuario.resx">
+      <DependentUpon>AltaModiUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmarTriage.resx">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
